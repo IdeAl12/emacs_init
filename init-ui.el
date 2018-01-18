@@ -1,0 +1,10 @@
+(provide 'init-ui)
+
+(tool-bar-mode -1)
+(scroll-bar-mode -1)
+(setq inhibit-splash-screen t)
+(global-linum-mode t)
+(setq ring-bell-function 'ignore)
+(setq-default cursor-type 'bar)
+(global-hl-line-mode 1)
+(global-auto-revert-mode t)
