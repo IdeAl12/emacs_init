@@ -12,4 +12,16 @@
 
 (global-set-key (kbd "C-c r") 'org-capture)
 
+(defun my-org-mode ()
+  (setq truncate-lines nil)
+  )
+(add-hook 'org-mode-hook 'my-org-mode)
+
+(setq org-latex-pdf-process '("xelatex -interaction nonstopmode %f"
+			      "xelatex -interaction nonstopmode %f"))
+
+
+(setq org-indent-mode t)
+
+
 (provide 'init-org)
