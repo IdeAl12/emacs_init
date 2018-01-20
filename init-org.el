@@ -10,7 +10,6 @@
   )
 
 
-(global-set-key (kbd "C-c r") 'org-capture)
 
 (defun my-org-mode ()
   (setq truncate-lines nil)
