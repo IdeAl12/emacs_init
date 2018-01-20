@@ -10,6 +10,7 @@
 ;;add whatever packages you want here
 (defvar lixiang/packages '(
 			   company
+			   list-processes+
 			   monokai-theme
 			   hungry-delete
 			   swiper
@@ -18,6 +19,7 @@
 			   js2-mode
 			   exec-path-from-shell
 			   elpy
+			   epc
 			   flycheck
 			   better-defaults
 			   popwin
@@ -56,7 +58,7 @@
 
 (setq elpy-rpc-python-command "python3")
 (setq python-shell-interpreter "python3")
-(setq pyvenv-virtualenvwrapper-python "/usr/bin/python3")
+(setq pyvenv-virtualenvwrapper-python "/usr/local/lib/python3.6")
 
 
 ;; PYTHON CONFIGURATION
