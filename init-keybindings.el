@@ -24,4 +24,6 @@
   (define-key company-active-map (kbd "C-n") #'company-select-next)
   (define-key company-active-map (kbd "C-n") #'company-select-previous))
 
+(global-set-key (kbd "C-c p s") 'helm-do-ag-project-root)
+
 (provide 'init-keybindings)

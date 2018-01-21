@@ -20,6 +20,7 @@
 			   exec-path-from-shell
 			   elpy
 			   epc
+			   helm-ag
 			   flycheck
 			   better-defaults
 			   popwin
