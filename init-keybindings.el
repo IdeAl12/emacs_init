@@ -13,8 +13,6 @@
 (global-set-key (kbd "C-M-\\") 'indent-region-or-buffer)
 (global-set-key (kbd "s-/") 'hippie-expand)
 
-(global-set-key (kbd "C-c e l") 'flycheck-list-errors)
-
 
 (with-eval-after-load 'dired
   (define-key dired-mode-map (kbd "RET") 'dired-find-alternate-file))
@@ -27,6 +25,11 @@
   (define-key company-active-map (kbd "C-n") #'company-select-next)
   (define-key company-active-map (kbd "C-n") #'company-select-previous))
 
-(global-set-key (kbd "C-c p s") 'helm-do-ag-project-root)
+
+
+;;删除前一个单词
+(global-set-key (kbd "C-w") 'backward-kill-word)
+
+;;(global-set-key (kbd "C-z") 'evil-set-toggle-key)
 
 (provide 'init-keybindings)
