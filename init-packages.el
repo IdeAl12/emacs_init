@@ -21,10 +21,11 @@
 			   elpy
 			   epc
 			   helm-ag
-			   flycheck
 			   better-defaults
 			   popwin
+			   flycheck
 			   reveal-in-osx-finder
+			   exec-path-from-shell
 			   window-numbering
 			   solarized-theme
 			   spacemacs-theme
@@ -89,8 +90,6 @@
        auto-mode-alist))
 
 
-
-
 (ivy-mode 1)
 (setq ivy-use-virtual-buffers t)
 (setq enable-recursive-minibuffers t)
@@ -100,13 +99,19 @@
 (smartparens-global-mode t)
 (sp-local-pair 'emacs-lisp-mode "'" nil :actions nil)
 
-;; python environment                                    
+;; python environment
 (autoload 'jedi:setup "jedi" nil t)
 (add-hook 'python-mode-hook 'jedi:setup)
-(setq jedi:setup-keys t) ; optional                 
-(setq jedi:complete-on-dot t) ;optional
+;;(setq jedi:setup-keys t) ; optional
+;;(setq jedi:complete-on-dot t) ;optional
+
 (global-auto-complete-mode 1)
 
 (global-company-mode t)
+
+(when (memq window-system '(mac ns))
+  (exec-path-from-shell-initialize))
+
+(exec-path-from-shell-initialize)
 
 (provide 'init-packages)
