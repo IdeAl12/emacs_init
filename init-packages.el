@@ -10,7 +10,9 @@
 
 ;;add whatever packages you want here
 (defvar lixiang/packages '(
+			   mwe-log-commands
 			   company
+			   which-key
 			   list-processes+
 			   monokai-theme
 			   hungry-delete

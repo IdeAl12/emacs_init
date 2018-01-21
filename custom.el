@@ -13,7 +13,8 @@
  '(evil-want-C-u-scroll t)
  '(package-selected-packages
    (quote
-    (powerline window-numbering evil evil-leader jedi auto-complete epc smex monokai-theme hungry-delete company))))
+    (which-key powerline window-numbering evil evil-leader jedi auto-complete epc smex monokai-theme hungry-delete company)))
+ '(which-key-idle-delay 0.2))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
