@@ -13,7 +13,7 @@
  '(evil-want-C-u-scroll t)
  '(package-selected-packages
    (quote
-    (use-package shut-up skewer-mode smartparens solarized-theme spacemacs-theme swiper undo-tree websocket yasnippet pallet mwe-log-commands git commander f dash s which-key powerline window-numbering evil evil-leader jedi auto-complete epc smex monokai-theme hungry-delete company)))
+    (company-anaconda use-package shut-up skewer-mode smartparens solarized-theme spacemacs-theme swiper undo-tree websocket yasnippet pallet mwe-log-commands git commander f dash s which-key powerline window-numbering evil evil-leader jedi auto-complete epc smex monokai-theme hungry-delete company)))
  '(which-key-idle-delay 0.2))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.

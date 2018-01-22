@@ -177,5 +177,16 @@
 (which-key-mode 1)
 (setq which-key-side-window-location 'right) 
 
+(add-hook 'python-mode-hook 'anaconda-mode)
+
+(add-hook 'python-mode-hook
+	  (lambda ()
+	    (set (make-local-variable 'company-backends) '(company-anaconda company-dabbrev)))) 
+
+
+(add-hook 'elpy-mode-hook
+	  (lambda ()
+	    (set (make-local-variable 'company-backends) '(company-anaconda company-dabbrev)))) 
+
 (provide 'init-packages)
  
