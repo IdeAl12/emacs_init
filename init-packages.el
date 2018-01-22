@@ -1,58 +1,58 @@
 
-
-(when (>= emacs-major-version 24)
-    (require 'package)
-    (package-initialize)
-    (add-to-list 'package-archives
-		 '("melpa" . "http://melpa.org/packages/") t)
-    )
 (require 'cl)
 
-;;add whatever packages you want here
-(defvar lixiang/packages '(
-			   mwe-log-commands
-			   company
-			   which-key
-			   list-processes+
-			   monokai-theme
-			   hungry-delete
-			   swiper
-			   auto-yasnippet
-			   counsel
-			   smartparens
-			   js2-mode
-			   exec-path-from-shell
-			   elpy
-			   epc
-			   window-numbering
-			   helm-ag
-			   better-defaults
-			   popwin
-			   flycheck
-			   reveal-in-osx-finder
-			   exec-path-from-shell
-			   window-numbering
-			   solarized-theme
-			   spacemacs-theme
-			   evil
-			   evil-leader
-			   evil-surround
-			   evil-nerd-commenter
-			   
-			   )  "Default packages")
-(setq package-selected-packages 'lixiang/packages)
+;; (when (>= emacs-major-version 24)
+;;   (setq package-archives'(
+;; 			  ("melpa" . "http://elpa.zilongshanren.com/melpa/")
+;; 			  ;;("gnu" . "http://elpa.zilongshanren.com/gnu/")
+;; 			  )))
 
-(defun lixiang/packages-installed-p ()
-    (loop for pkg in lixiang/packages
-          when (not (package-installed-p pkg)) do (return nil)
-          finally (return t)))
 
-(unless (lixiang/packages-installed-p)
-    (message "%s" "Refreshing package database...")
-    (package-refresh-contents)
-    (dolist (pkg lixiang/packages)
-      (when (not (package-installed-p pkg))
-        (package-install pkg))))
+;; ;;add whatever packages you want here
+;; (defvar lixiang/packages '(
+;; 			   pallet
+;; 			   mwe-log-commands
+;; 			   company
+;; 			   which-key
+;; 			   list-processes+
+;; 			   monokai-theme
+;; 			   hungry-delete
+;; 			   swiper
+;; 			   auto-yasnippet
+;; 			   counsel
+;; 			   smartparens
+;; 			   js2-mode
+;; 			   exec-path-from-shell
+;; 			   elpy
+;; 			   epc
+;; 			   window-numbering
+;; 			   helm-ag
+;; 			   better-defaults
+;; 			   popwin
+;; 			   flycheck
+;; 			   reveal-in-osx-finder
+;; 			   exec-path-from-shell
+;; 			   window-numbering
+;; 			   solarized-theme
+;; 			   spacemacs-theme
+;; 			   evil
+;; 			   evil-leader
+;; 			   evil-surround
+;; 			   evil-nerd-commenter
+;; 			   )  "Default packages")
+;; (setq package-selected-packages 'lixiang/packages)
+
+;; (defun lixiang/packages-installed-p ()
+;;     (loop for pkg in lixiang/packages
+;;           when (not (package-installed-p pkg)) do (return nil)
+;;           finally (return t)))
+
+;; (unless (lixiang/packages-installed-p)
+;;     (message "%s" "Refreshing package database...")
+;;     (package-refresh-contents)
+;;     (dolist (pkg lixiang/packages)
+;;       (when (not (package-installed-p pkg))
+;;         (package-install pkg))))
 
 (defvar myPackages
   '(better-defaults
@@ -174,7 +174,8 @@
 	      (kbd "C-u") 'evil-scroll-up
 	      )))
 
-
+(which-key-mode 1)
+(setq which-key-side-window-location 'right) 
 
 (provide 'init-packages)
  
